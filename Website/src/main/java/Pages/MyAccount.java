@@ -28,6 +28,15 @@ public class MyAccount {
 	@FindBy(xpath = "//input[@name='register']")
 	public WebElement register;
 
+	@FindBy(xpath = "//div[@class='woocommerce-password-strength good']")
+	WebElement passtext;
+
+	@FindBy(xpath = "(//div[@class='woocommerce-MyAccount-content']/p/a)[1]")
+	WebElement signout;
+
+	@FindBy(xpath = "//ul[@class='woocommerce-error']/li")
+	WebElement error;
+
 	public void MyAccountbutton() {
 
 		myAccounts.click();
@@ -49,7 +58,26 @@ public class MyAccount {
 
 		register.click();
 	}
-	
 
+	public String passtext() {
+
+		return passtext.getText();
+	}
+
+	public void error() {
+
+	}
+
+	public void signoutbutton() {
+
+		signout.click();
+
+	}
+
+	public String errors() {
+		
+		return error.getText();
+
+	}
 
 }

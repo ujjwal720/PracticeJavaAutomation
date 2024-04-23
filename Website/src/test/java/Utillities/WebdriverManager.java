@@ -31,8 +31,9 @@ public class WebdriverManager {
 	public static WebDriver initilizedriver() throws IOException {
 
 		try {
-
-			File prope = new File("C:\\ecworkspace\\AutomationPractice\\src\\test\\java\\TestData\\Config.properties");
+			
+			String currentDirectory = System.getProperty("user.dir");
+			File prope = new File(currentDirectory+"\\src\\test\\java\\TestData\\Config.properties");
 			FileInputStream stream = new FileInputStream(prope);
 			Properties props = new Properties();
 			props.load(stream);
