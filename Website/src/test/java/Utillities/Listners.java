@@ -30,6 +30,7 @@ public class Listners implements ITestListener {
 			reorter.config().setDocumentTitle("Reports for the excuted testcases");
 			reorter.config().setReportName("Ujjwal Shrivastava");
 			reports = new ExtentReports();
+			
 			reports.attachReporter(reorter);
 
 		} catch (Exception e) {
