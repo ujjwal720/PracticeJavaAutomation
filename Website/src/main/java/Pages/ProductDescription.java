@@ -34,6 +34,10 @@ public class ProductDescription {
 
 	@FindBy(xpath = "//button[@type='submit']")
 	public WebElement addtobasket;
+	
+	
+	@FindBy(xpath="//h1[@class='product_title entry-title']")
+	public WebElement productname;
 
 	public void seleniumruby() {
 
@@ -69,6 +73,12 @@ public class ProductDescription {
 		
 		addtobasket.click();
 
+	}
+	
+	public String getname() {
+		
+		
+		return productname.getText();
 	}
 
 }

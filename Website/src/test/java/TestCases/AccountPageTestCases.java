@@ -104,11 +104,13 @@ public class AccountPageTestCases extends BaseTest {
 	@Test(description = "Keeping the email field as empty")
 	public void test6() {
 
+		
+		
 		MyAccount.MyAccountbutton();
 		MyAccount.email("");
 		MyAccount.pass("Ujjwal@123");
 		MyAccount.register();
-		String actual = "Error: Please provide a valid email address.";
+		String actual = "Er: Please provide a valid email address.";
 		Assert.assertEquals(MyAccount.errors(), actual);
 
 	}
@@ -120,7 +122,7 @@ public class AccountPageTestCases extends BaseTest {
 		MyAccount.email("lm@yopmail.com");
 		MyAccount.pass("");
 		MyAccount.register();
-		String actual = "Error: Please enter an account password.";
+		String actual = "Err: Please enter an account password.";
 		Assert.assertEquals(MyAccount.errors(), actual);
 
 	}

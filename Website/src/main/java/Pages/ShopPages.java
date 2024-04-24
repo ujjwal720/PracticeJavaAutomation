@@ -19,16 +19,27 @@ public class ShopPages {
 	}
 
 	@FindBy(xpath = "//ul[@id='main-nav']/li[1]/a")
-	WebElement shopbutton;
+	public WebElement shopbutton;
 
 	@FindBy(xpath = "//a[@class='woocommerce-LoopProduct-link']/h3")
-	List<WebElement> prices;
+	public List<WebElement> prices;
 
-	public void redirecttosho() {
-		
+	@FindBy(xpath = "//span[@class='count']")
+	public List<WebElement> countsofbooks;
+	
+	@FindBy(xpath="//ul[@class='product-categories']/li/a")
+	public List<WebElement> listelement;
+
+	@FindBy(xpath = "//a[@class='woocommerce-LoopProduct-link']")
+	public List<WebElement> countofproducts;
+	
+	
+	@FindBy(xpath="//a[@class='woocommerce-LoopProduct-link']/h3")
+	List<WebElement> productsnames;
+
+	public void redirecttoshop() {
+
 		shopbutton.click();
-		
-		
 
 	}
 
@@ -45,5 +56,14 @@ public class ShopPages {
 		}
 
 	}
+	
+	
 
+	public int getproductnamessizes() {
+
+		return countofproducts.size();
+
+	}
+
+	
 }
