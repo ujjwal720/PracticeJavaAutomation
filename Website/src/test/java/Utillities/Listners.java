@@ -91,6 +91,10 @@ public class Listners extends BaseTest implements ITestListener {
 			String props = getproperty + "\\screenshots\\" +oi+" " +formattedDateTime + ".png";
 			File target=new File(props);
 		    FileUtils.copyFile(source, target);
+		    test=reports.createTest(result.getName());
+		    test.log(Status.FAIL,MarkupHelper.createLabel(result.getName(), ExtentColor.RED));
+		    test.addScreenCaptureFromPath(props);
+		    
 			
 			
 
@@ -107,6 +111,8 @@ public class Listners extends BaseTest implements ITestListener {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
+		  test=reports.createTest(result.getName());
+		    test.log(Status.SKIP,MarkupHelper.createLabel(result.getName(), ExtentColor.CYAN));
 
 	}
 
