@@ -34,17 +34,15 @@ public class WebdriverManager {
 			
 			String currentDirectory = System.getProperty("user.dir");
 			File prope = new File(currentDirectory+"\\src\\test\\java\\TestData\\Config.properties");
-			FileInputStream stream = new FileInputStream(prope);
-			Properties props = new Properties();
-			props.load(stream);
-			String browser = props.getProperty("browser");
+			Propertiesfilereader pro=new Propertiesfilereader();
+			String browser =pro.ReadPropertiesfiles(prope, "browser");
 			if (browser.equals("chrome")) {
 
 				driver = new ChromeDriver();
 
 			}
 			
-			driver.get(props.getProperty("url"));
+			driver.get(pro.ReadPropertiesfiles(prope, "url"));
 			driver.manage().window().maximize();
 
 			return driver;

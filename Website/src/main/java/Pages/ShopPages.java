@@ -35,7 +35,27 @@ public class ShopPages {
 	
 	
 	@FindBy(xpath="//a[@class='woocommerce-LoopProduct-link']/h3")
-	List<WebElement> productsnames;
+	public List<WebElement> productsnames;
+	
+	@FindBy(xpath="//span[@class='cartcontents']")
+	public WebElement cartbutton;
+	
+	@FindBy(xpath="//a[text()='Add to basket']")
+	public List<WebElement>  addtobasket;
+	
+	@FindBy(xpath="//span[@class='cartcontents']")
+	public WebElement priceincart;
+	
+	@FindBy(xpath="//span[@class='price']/span")
+	public List<WebElement> pagepriceswhichnotcut;
+	
+	@FindBy(xpath="//span[@class='price']/ins/span")
+	public List<WebElement>pri;
+	
+	@FindBy(xpath="//select[@name='orderby']")
+	public WebElement select;
+	
+	
 
 	public void redirecttoshop() {
 

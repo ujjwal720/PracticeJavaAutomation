@@ -1,6 +1,8 @@
 package TestCases;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -65,11 +67,46 @@ public class ShoopingTestCases {
 
 	}
 
-	@Test(description = "To test the sorting functionality of the webpage and compare the prices form the list")
+	@Test(description = "To test the sorting functionality of the webpage and compare the prices form the list for the prices hve counted nly cut prices")
 	public void test3() {
-		
-		
+		int count = 0;
+		shopping.shopbutton.click();
+		List<WebElement> prices = shopping.pagepriceswhichnotcut;
+		Methods.SelectByindex(shopping.select, 4);
+		List<Integer> pol = new ArrayList<Integer>();
+		for (int i = 0; i <= prices.size() - 1; i++) {
+			int get_dot = prices.get(i).getText().indexOf(".");
+			String texts = prices.get(i).getText().substring(1, get_dot);
+			int pric = Integer.parseInt(texts);
+			pol.add(pric);
+
+		}
+        System.out.println(pol);
+		List<Integer> tr = new ArrayList<Integer>(pol);
+		System.out.println(tr);
+		Collections.sort(tr);
+		System.out.println(tr);
+		for (int i = 0; i <= tr.size() - 1; i++) {
+
+			if (tr.get(i) == pol.get(i)) {
+
+			}
+			else {
+				
+				count++;
+				Assert.assertTrue(false);
+				break;
+			}
+
+		}
 
 	}
+	
+	
+	
+	
+	
+	
+	
 
 }

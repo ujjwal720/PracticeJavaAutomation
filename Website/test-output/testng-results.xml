@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="6" passed="2" failed="2" skipped="0">
+<testng-results ignored="2" total="5" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-25T12:18:52 IST" name="Suite" finished-at="2024-04-25T12:20:41 IST" duration-ms="109088">
+  <suite started-at="2024-04-29T18:39:28 IST" name="Default suite" finished-at="2024-04-29T18:39:49 IST" duration-ms="21218">
     <groups>
     </groups>
-    <test started-at="2024-04-25T12:18:52 IST" name="Test" finished-at="2024-04-25T12:20:41 IST" duration-ms="109088">
-      <class name="TestCases.AccountPageTestCases">
-        <test-method is-config="true" signature="getdriver()[pri:0, instance:TestCases.AccountPageTestCases@4102b1b1]" started-at="2024-04-25T12:18:52 IST" name="getdriver" finished-at="2024-04-25T12:18:52 IST" duration-ms="26" status="PASS">
+    <test started-at="2024-04-29T18:39:28 IST" name="Default test" finished-at="2024-04-29T18:39:49 IST" duration-ms="21218">
+      <class name="TestCases.OrderingScenario">
+        <test-method is-config="true" signature="getdriver()[pri:0, instance:TestCases.OrderingScenario@1bb9aa43]" started-at="2024-04-29T18:39:28 IST" name="getdriver" finished-at="2024-04-29T18:39:28 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getdriver -->
-        <test-method signature="test5()[pri:0, instance:TestCases.AccountPageTestCases@4102b1b1]" started-at="2024-04-25T12:18:54 IST" name="test5" description="To test is with empty username and password" finished-at="2024-04-25T12:19:15 IST" duration-ms="20730" status="PASS">
+        <test-method signature="test1()[pri:0, instance:TestCases.OrderingScenario@1bb9aa43]" started-at="2024-04-29T18:39:28 IST" name="test1" description="To calculate the 3 items of tota in the car table" finished-at="2024-04-29T18:39:42 IST" duration-ms="14199" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method signature="test6()[pri:0, instance:TestCases.AccountPageTestCases@4102b1b1]" started-at="2024-04-25T12:19:15 IST" name="test6" description="Keeping the email field as empty" finished-at="2024-04-25T12:20:23 IST" duration-ms="68171" status="FAIL">
+        </test-method> <!-- test1 -->
+        <test-method signature="test4()[pri:0, instance:TestCases.OrderingScenario@1bb9aa43]" started-at="2024-04-29T18:39:42 IST" name="test4" description="prices should be correct when we update the product price form the input" finished-at="2024-04-29T18:39:43 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method signature="test6()[pri:0, instance:TestCases.OrderingScenario@1bb9aa43]" started-at="2024-04-29T18:39:43 IST" name="test6" description="to see whether the quantity is same in the checkout page" finished-at="2024-04-29T18:39:49 IST" depends-on-methods="TestCases.OrderingScenario.test4" duration-ms="6006" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]]]>
+              <![CDATA[expected [× 2] but found [2]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]
+              <![CDATA[java.lang.AssertionError: expected [× 2] but found [2]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
 at org.testng.Assert.assertEquals(Assert.java:639)
-at TestCases.AccountPageTestCases.test6(AccountPageTestCases.java:114)
+at TestCases.OrderingScenario.test6(OrderingScenario.java:142)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,67 +59,15 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
 at org.testng.TestNG.runSuites(TestNG.java:1063)
 at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test6 -->
-        <test-method signature="test7()[pri:0, instance:TestCases.AccountPageTestCases@4102b1b1]" started-at="2024-04-25T12:20:24 IST" name="test7" description="to test the functionality of the with email as intact and pass empty" finished-at="2024-04-25T12:20:41 IST" duration-ms="17407" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at TestCases.AccountPageTestCases.test7(AccountPageTestCases.java:126)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test7 -->
-        <test-method signature="test8()[pri:0, instance:TestCases.AccountPageTestCases@4102b1b1]" started-at="2024-04-25T12:20:41 IST" name="test8" description="To test the functionality of the main gate" finished-at="2024-04-25T12:20:41 IST" duration-ms="20" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test8 -->
-      </class> <!-- TestCases.AccountPageTestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- TestCases.OrderingScenario -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

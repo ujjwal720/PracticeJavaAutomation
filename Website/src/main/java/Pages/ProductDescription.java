@@ -35,6 +35,11 @@ public class ProductDescription {
 	@FindBy(xpath = "//button[@type='submit']")
 	public WebElement addtobasket;
 	
+	@FindBy(xpath="//a[@class='button wc-forward']")
+	public WebElement viewbasket;
+	
+	
+	
 	
 	@FindBy(xpath="//h1[@class='product_title entry-title']")
 	public WebElement productname;
