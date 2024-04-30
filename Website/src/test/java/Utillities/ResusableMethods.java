@@ -90,5 +90,18 @@ public class ResusableMethods extends BaseTest {
 		return lists;
 
 	}
+	
+	/*
+	 * remove rupess sign form it
+	 */
+
+	public String removecertainellementformstring(String value, int x, WebElement elemts) {
+
+		int u = elemts.getText().indexOf(value);
+		String actual = elemts.getText().substring(x, u);
+		
+		  return actual;
+
+	}
 
 }
