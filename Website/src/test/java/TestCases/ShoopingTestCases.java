@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import Pages.ProductDescription;
 import Pages.ShopPages;
-import Utillities.BaseTest;
+import Listners.BaseTest;
 import Utillities.ResusableMethods;
 
 public class ShoopingTestCases {
@@ -73,40 +73,36 @@ public class ShoopingTestCases {
 		shopping.shopbutton.click();
 		List<WebElement> prices = shopping.pagepriceswhichnotcut;
 		Methods.SelectByindex(shopping.select, 4);
-		List<Integer> pol = new ArrayList<Integer>();
-		for (int i = 0; i <= prices.size() - 1; i++) {
-			int get_dot = prices.get(i).getText().indexOf(".");
-			String texts = prices.get(i).getText().substring(1, get_dot);
-			int pric = Integer.parseInt(texts);
-			pol.add(pric);
+		/*
+		 * List<Integer> pol = new ArrayList<Integer>(); for (int i = 0; i <=
+		 * prices.size() - 1; i++) { int get_dot = prices.get(i).getText().indexOf(".");
+		 * String texts = prices.get(i).getText().substring(1, get_dot); int pric =
+		 * Integer.parseInt(texts); pol.add(pric);
+		 * 
+		 * } System.out.println(pol); List<Integer> tr = new ArrayList<Integer>(pol);
+		 * System.out.println(tr); Collections.sort(tr); System.out.println(tr); for
+		 * (int i = 0; i <= tr.size() - 1; i++) {
+		 * 
+		 * if (tr.get(i) == pol.get(i)) {
+		 * 
+		 * } else {
+		 * 
+		 * count++; Assert.assertTrue(false); break; }
+		 * 
+		 */
 
-		}
-        System.out.println(pol);
-		List<Integer> tr = new ArrayList<Integer>(pol);
-		System.out.println(tr);
-		Collections.sort(tr);
-		System.out.println(tr);
-		for (int i = 0; i <= tr.size() - 1; i++) {
+		List<Integer> price = Methods.justgettextofnumbers(shopping.pagepriceswhichnotcut);
+		System.out.println(price.size());
 
-			if (tr.get(i) == pol.get(i)) {
+		List<Integer> io = Methods.sortingfunctionality(shopping.pagepriceswhichnotcut);
+		System.out.println(io.size());
 
-			}
-			else {
-				
-				count++;
-				Assert.assertTrue(false);
-				break;
-			}
+		boolean result = Methods.comparetwolistsfully(price, io);
+		
+		System.out.println(result);
 
-		}
+		
 
 	}
-	
-	
-	
-	
-	
-	
-	
 
 }

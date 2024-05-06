@@ -49,7 +49,8 @@ public class ResusableMethods extends BaseTest {
 
 	}
 	/*
-	 * to do the sort functionality sort functionality for the scripts
+	 * to do the sort functionality sort functionality for the scripts with java
+	 * method
 	 */
 
 	public List<Integer> sortingfunctionality(List<WebElement> elements) {
@@ -90,7 +91,7 @@ public class ResusableMethods extends BaseTest {
 		return lists;
 
 	}
-	
+
 	/*
 	 * remove rupess sign form it
 	 */
@@ -99,8 +100,53 @@ public class ResusableMethods extends BaseTest {
 
 		int u = elemts.getText().indexOf(value);
 		String actual = elemts.getText().substring(x, u);
-		
-		  return actual;
+
+		return actual;
+
+	}
+
+	/*
+	 * compariison of prices in the list in the website then compare prices
+	 * 
+	 * 
+	 */
+
+	public boolean comparetwolistsfully(List<Integer> prices, List<Integer> prices2) {
+
+		boolean result = false;
+		int count = 0;
+
+		if (prices.size() == prices2.size()) {
+
+			for (int i = 0; i <= prices.size() - 1; i++) {
+
+				if (prices.get(i) == prices2.get(i)) {
+					
+
+					count++;
+					System.out.println(count);
+
+				}
+
+			}
+
+			if (count == prices.size()) {
+				
+				result=true;
+				System.out.println(count);
+
+				return result;
+			}
+
+			else {
+				
+				result=false;
+				return result;
+			}
+
+		}
+
+		return result;
 
 	}
 

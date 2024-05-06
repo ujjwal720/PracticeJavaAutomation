@@ -1,4 +1,4 @@
-package Utillities;
+package CodingProblems;
 
 public class prac {
 

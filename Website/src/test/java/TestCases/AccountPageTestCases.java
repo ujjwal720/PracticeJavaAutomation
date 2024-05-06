@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import Utillities.BaseTest;
+import Listners.BaseTest;
 import Utillities.ExelUtilities;
 import Utillities.ResusableMethods;
 
@@ -56,7 +56,7 @@ public class AccountPageTestCases extends BaseTest {
 
 		ExelUtilities excel = new ExelUtilities();
 		String currentDirectory = System.getProperty("user.dir");
-		String relativePath = "//src//test/java//Utillities//AutomationPractice.xlsx";
+		String relativePath = "//src//test/java//TestData//AutomationPractice.xlsx";
 		File a = new File(currentDirectory + relativePath);
 		int cols = excel.getcolno(a);
 		int rows = excel.getrowno(a) + 1;
