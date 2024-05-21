@@ -65,13 +65,16 @@ public class AccountPageTestCases extends BaseTest {
 
 			for (int j = 0; j < cols; j++) {
 
-				data[i][j] = excel.ReadExcelFile(a, i, j);
+				data[i][j] = excel.readExcelFile(a, i, j);
 
 			}
 
 		}
-
+		
+		
 		return data;
+
+		
 
 	}
 

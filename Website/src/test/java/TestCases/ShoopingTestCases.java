@@ -92,15 +92,24 @@ public class ShoopingTestCases {
 		 */
 
 		List<Integer> price = Methods.justgettextofnumbers(shopping.pagepriceswhichnotcut);
-		System.out.println(price.size());
-
 		List<Integer> io = Methods.sortingfunctionality(shopping.pagepriceswhichnotcut);
-		System.out.println(io.size());
 
 		boolean result = Methods.comparetwolistsfully(price, io);
-		
+
 		System.out.println(result);
 
+	}
+
+	
+	@Test(description="To test the functionality in the very great way for the following scenarios")
+	public void test4() {
+		
+		  
+		
+		
+	
+		
+		
 		
 
 	}

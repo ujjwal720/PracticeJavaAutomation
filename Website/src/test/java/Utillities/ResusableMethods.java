@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import Listners.BaseTest;
 
 public class ResusableMethods extends BaseTest {
 
@@ -120,27 +121,23 @@ public class ResusableMethods extends BaseTest {
 
 			for (int i = 0; i <= prices.size() - 1; i++) {
 
-				if (prices.get(i) == prices2.get(i)) {
-					
+				int x = prices.get(i);
+				int n = prices.get(i);
+
+				if (x==n) {
 
 					count++;
-					System.out.println(count);
 
 				}
 
 			}
 
 			if (count == prices.size()) {
-				
-				result=true;
+
+				System.out.println(count);
+				result = true;
 				System.out.println(count);
 
-				return result;
-			}
-
-			else {
-				
-				result=false;
 				return result;
 			}
 

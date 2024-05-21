@@ -1,4 +1,4 @@
- package Pages;
+package Pages;
 
 import java.util.List;
 
@@ -8,13 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BillingDetailsPage {
-	
-	
+
 	public WebDriver driver;
 
 	public BillingDetailsPage(WebDriver driver) {
-		
-		this.driver=driver;
+
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
@@ -45,19 +44,37 @@ public class BillingDetailsPage {
 
 	@FindBy(xpath = "//input[@name='billing_postcode']")
 	public WebElement postcode;
-	
-	@FindBy(xpath="(//ul[@class='wc_payment_methods payment_methods methods']/li/input)[3]")
+
+	@FindBy(xpath = "(//ul[@class='wc_payment_methods payment_methods methods']/li/input)[3]")
 	public WebElement cashofdelivery;
-	
-	@FindBy(xpath="//strong[@class='product-quantity']")
+
+	@FindBy(xpath = "//strong[@class='product-quantity']")
 	public List<WebElement> productsquantity;
+
+	@FindBy(xpath = "//input[@id='place_order']")
+	public WebElement place_order;
 	
-	
-	
-	
-	
-	
-	
-	
+	@FindBy(xpath="//ul[@class='woocommerce-error']")
+	public WebElement error;
+
+	public void submitform(String firstname, String lastname, String company,String email, String phonenumber, String address,
+			String city, String postcode) {
+
+		this.firstname.sendKeys(firstname);
+		this.lastname.sendKeys(lastname);
+		this.billing_company.sendKeys(company);
+		this.email.sendKeys(email);
+		this.phonenumbers.sendKeys(phonenumber);
+		this.billing_address.sendKeys(address);
+		this.city.sendKeys(city);
+		this.postcode.sendKeys(postcode);
+
+	}
+
+	public void placeorder() {
+		
+		place_order.click();
+
+	}
 
 }

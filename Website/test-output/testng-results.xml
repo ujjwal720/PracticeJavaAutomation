@@ -1,409 +1,378 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="6" ignored="6" total="16" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-06T23:34:52 IST" name="RegressionTestCases" finished-at="2024-05-06T23:35:30 IST" duration-ms="38027">
+  <suite started-at="2024-05-21T15:40:09 IST" name="Default suite" finished-at="2024-05-21T15:42:17 IST" duration-ms="127339">
     <groups>
     </groups>
-    <test started-at="2024-05-06T23:34:52 IST" name="Test" finished-at="2024-05-06T23:35:30 IST" duration-ms="38027">
-      <class name="TestCases.AccountPageTestCases">
-        <test-method is-config="true" signature="getdriver()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:34:52 IST" name="getdriver" finished-at="2024-05-06T23:34:52 IST" duration-ms="20" status="PASS">
+    <test started-at="2024-05-21T15:40:09 IST" name="Default test" finished-at="2024-05-21T15:42:17 IST" duration-ms="127339">
+      <class name="TestCases.OrderingScenario">
+        <test-method is-config="true" signature="getdriver()[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:40:09 IST" name="getdriver" finished-at="2024-05-21T15:40:09 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getdriver -->
-        <test-method signature="test5()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:34:53 IST" name="test5" description="To test is with empty username and password" finished-at="2024-05-06T23:34:58 IST" duration-ms="5660" status="PASS">
+        <test-method signature="test1()[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:40:10 IST" name="test1" description="To calculate the 3 items of tota in the car table" finished-at="2024-05-21T15:40:24 IST" duration-ms="14290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:40:31 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:40:42 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="10850" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[T]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Milton]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1Rivet]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sm@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123411111]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near sai bab mandir]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[kolkata]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[142111]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test5 -->
-        <test-method retried="true" signature="test6()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:34:58 IST" name="test6" description="Keeping the email field as empty" finished-at="2024-05-06T23:35:02 IST" duration-ms="3488" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test6(AccountPageTestCases.java:114)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:40:42 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:40:58 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="15948" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[1rivet]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sm@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123411111]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near sai bab mandir]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[kolkata]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[142111]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method retried="true" signature="test6()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:02 IST" name="test6" description="Keeping the email field as empty" finished-at="2024-05-06T23:35:07 IST" duration-ms="4607" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test6(AccountPageTestCases.java:114)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- test5 -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:40:58 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:41:15 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="16333" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Milton]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[SAP Labs]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sdmy@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123411111]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near sai bab mandir delhi]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Mal]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[14211]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method retried="true" signature="test6()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:07 IST" name="test6" description="Keeping the email field as empty" finished-at="2024-05-06T23:35:09 IST" duration-ms="2772" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test6(AccountPageTestCases.java:114)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- test5 -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:41:15 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:41:32 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="17801" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ajay]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nayka]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SW2@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[123411111]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near Manhattan]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Mnalbagh]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[123123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method signature="test6()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:09 IST" name="test6" description="Keeping the email field as empty" finished-at="2024-05-06T23:35:12 IST" duration-ms="2705" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Er: Please provide a valid email address.] but found [Error: Please provide a valid email address.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test6(AccountPageTestCases.java:114)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- test5 -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:41:32 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:41:47 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="14512" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ajay]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[DelhiLabds]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sw98@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[ERT56]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near Mandir]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Daman]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2333121]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method retried="true" signature="test7()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:12 IST" name="test7" description="to test the functionality of the with email as intact and pass empty" finished-at="2024-05-06T23:35:18 IST" duration-ms="5538" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test7(AccountPageTestCases.java:126)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- test5 -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:41:47 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:42:02 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="15009" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ajay]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Singh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Delhilads]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sw453@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12345612311]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near Laptaganj]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Laptaganj]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[121678]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test7 -->
-        <test-method retried="true" signature="test7()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:18 IST" name="test7" description="to test the functionality of the with email as intact and pass empty" finished-at="2024-05-06T23:35:24 IST" duration-ms="5758" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test7(AccountPageTestCases.java:126)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- test5 -->
+        <test-method signature="test5(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.OrderingScenario@7cbee484]" started-at="2024-05-21T15:42:02 IST" name="test5" description="To test the functionality for the folowing fields with excel" data-provider="testdatabilling" finished-at="2024-05-21T15:42:17 IST" depends-on-methods="TestCases.OrderingScenario.test1" duration-ms="14883" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ajay]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dehedia]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[DeHDIA]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[sw453@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Near Laptaganj]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Laptaganj America]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[121679]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test7 -->
-        <test-method retried="true" signature="test7()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:24 IST" name="test7" description="to test the functionality of the with email as intact and pass empty" finished-at="2024-05-06T23:35:26 IST" duration-ms="2921" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test7(AccountPageTestCases.java:126)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test7 -->
-        <test-method signature="test7()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:26 IST" name="test7" description="to test the functionality of the with email as intact and pass empty" finished-at="2024-05-06T23:35:30 IST" duration-ms="3128" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Err: Please enter an account password.] but found [Error: Please enter an account password.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at TestCases.AccountPageTestCases.test7(AccountPageTestCases.java:126)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test7 -->
-        <test-method signature="test8()[pri:0, instance:TestCases.AccountPageTestCases@2416a51]" started-at="2024-05-06T23:35:30 IST" name="test8" description="To test the functionality of the main gate" finished-at="2024-05-06T23:35:30 IST" duration-ms="19" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test8 -->
-      </class> <!-- TestCases.AccountPageTestCases -->
-    </test> <!-- Test -->
-  </suite> <!-- RegressionTestCases -->
+        </test-method> <!-- test5 -->
+      </class> <!-- TestCases.OrderingScenario -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
