@@ -8,7 +8,9 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -124,7 +126,7 @@ public class ResusableMethods extends BaseTest {
 				int x = prices.get(i);
 				int n = prices.get(i);
 
-				if (x==n) {
+				if (x == n) {
 
 					count++;
 
@@ -144,6 +146,14 @@ public class ResusableMethods extends BaseTest {
 		}
 
 		return result;
+
+	}
+
+	public String Keychods(String s) {
+
+		String l = Keys.chord(Keys.ENTER, s);
+		
+		return l;
 
 	}
 

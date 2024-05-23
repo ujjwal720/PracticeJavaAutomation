@@ -20,6 +20,9 @@ public class HomePage {
 	@FindBy(xpath = "//input[@name='EMAIL']")
 	public WebElement emailid;
 
+	@FindBy(xpath = "//input[@title='Search']")
+	public WebElement search;
+
 	public HomePage(WebDriver driver) {
 
 		this.driver = driver;
@@ -32,6 +35,12 @@ public class HomePage {
 		int arrivals = newarrivals.size();
 
 		return arrivals;
+
+	}
+
+	public void sendvaluetosearch(String s) {
+		
+		search.sendKeys(s);
 
 	}
 

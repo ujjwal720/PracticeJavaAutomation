@@ -33,7 +33,6 @@ public class ShopPages {
 	@FindBy(xpath = "//a[@class='woocommerce-LoopProduct-link']")
 	public List<WebElement> countofproducts;
 	
-	
 	@FindBy(xpath="//a[@class='woocommerce-LoopProduct-link']/h3")
 	public List<WebElement> productsnames;
 	

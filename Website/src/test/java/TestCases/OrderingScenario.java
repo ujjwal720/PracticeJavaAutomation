@@ -27,6 +27,8 @@ public class OrderingScenario extends BaseTest {
 	public BillingDetailsPage details;
 	public int totalprice;
 	public ExelUtilities readexcel;
+	public File files;
+	public int rows = 0;
 
 	public OrderingScenario() throws IOException {
 
@@ -38,6 +40,8 @@ public class OrderingScenario extends BaseTest {
 		details = new BillingDetailsPage(BaseTest.getdriver());
 		totalprice = 0;
 		readexcel = new ExelUtilities();
+		files = new File(
+				"C:\\Users\\UjjwalShrivastava\\git\\PracticeJavaAutomation\\Website\\src\\test\\java\\TestData\\datadrivenbilling.xlsx");
 
 	}
 
@@ -103,7 +107,8 @@ public class OrderingScenario extends BaseTest {
 
 	@Test(description = "To test the functionality for the folowing fields with excel", dependsOnMethods = "test1", dataProvider = "testdatabilling")
 	public void test5(String flag, String firstname, String lastname, String comp_name, String email, String mobole,
-			String address, String City, String pincode) {
+			String address, String City, String pincode) throws Exception {
+
 		try {
 
 			/*
@@ -118,31 +123,30 @@ public class OrderingScenario extends BaseTest {
 			 * 
 			 */
 
-			for (int i = 0; i <= 6; i++) {
+			if (flag.equals("T")) {
+				Basket.checkout.click();
+				methods.waits(details.firstname);
+				details.submitform(firstname, lastname, comp_name, email, mobole, address, City, pincode);
+				details.placeorder();
+				Thread.sleep(3000);
+				String result = "Pass";
 
-				if (flag.equals("T")) {
-					Basket.checkout.click();
-					methods.waits(details.firstname);
-					details.submitform(firstname, lastname, comp_name, email, mobole, address, City, pincode);
-					details.placeorder();
-					Thread.sleep(3000);
-					String result = "Pass";
-					readexcel.setCellData(result, i, i, result, null)
+				readexcel.setCellData(result, rows, 9, files);
 
-				}
+			}
 
-				else {
+			else {
 
-					test1();
-					Basket.checkout.click();
-					methods.waits(details.firstname);
-					details.submitform(firstname, lastname, comp_name, email, mobole, address, City, pincode);
-					details.placeorder();
-					methods.waits(details.firstname);
-					Thread.sleep(2000);
-					Assert.assertTrue(details.error.isDisplayed());
-
-				}
+				test1();
+				Basket.checkout.click();
+				methods.waits(details.firstname);
+				details.submitform(firstname, lastname, comp_name, email, mobole, address, City, pincode);
+				details.placeorder();
+				methods.waits(details.firstname);
+				Thread.sleep(2000);
+				Assert.assertTrue(details.error.isDisplayed());
+				String result = "Pass";
+				readexcel.setCellData(result, rows, 9, files);
 
 			}
 
@@ -150,7 +154,13 @@ public class OrderingScenario extends BaseTest {
 
 		catch (Exception e) {
 
-			e.printStackTrace();
+			readexcel.setCellData("Fail", rows, 9, files);
+
+		}
+
+		finally {
+
+			rows++;
 
 		}
 
@@ -183,6 +193,10 @@ public class OrderingScenario extends BaseTest {
 
 	}
 
+	/*
+	 * the following code is of the excel file in which test cases of the billing is taken for consideration
+	 */
+	
 	@DataProvider
 	public Object[][] testdatabilling() throws IOException {
 

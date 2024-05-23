@@ -8,15 +8,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Pages.HomePage;
+import Utillities.ResusableMethods;
 import Listners.BaseTest;
 
 public class HomePageTestCases extends BaseTest {
 
 	public HomePage HomePage;
+	public ResusableMethods methods;
 
 	public HomePageTestCases() throws IOException {
 		HomePage = new HomePage(BaseTest.getdriver());
-
+		methods = new ResusableMethods();
 	}
 
 	@Test(priority = 1, description = "To test the slider value whether the item remain is three or not")
@@ -52,8 +54,19 @@ public class HomePageTestCases extends BaseTest {
 	@Test(priority = 4, description = "To test the functionality on the basis of it")
 	public void test4() {
 
-		
-		
 	}
+
+	@Test(priority = 5, description = "To test the search functionality of the following for it is in the following")
+
+	public void test5() {
+
+		HomePage.sendvaluetosearch("Selenium");
+		HomePage.sendvaluetosearch(methods.Keychods(""));
+
+	}
+	
+	
+
+
 
 }
