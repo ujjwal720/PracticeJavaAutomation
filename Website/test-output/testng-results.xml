@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-22T18:35:49 IST" name="Default suite" finished-at="2024-05-22T18:35:58 IST" duration-ms="8779">
+  <suite started-at="2024-05-24T16:16:52 IST" name="Default suite" finished-at="2024-05-24T16:16:53 IST" duration-ms="125">
     <groups>
     </groups>
-    <test started-at="2024-05-22T18:35:49 IST" name="Default test" finished-at="2024-05-22T18:35:58 IST" duration-ms="8779">
-      <class name="TestCases.HomePageTestCases">
-        <test-method is-config="true" signature="getdriver()[pri:0, instance:TestCases.HomePageTestCases@1fc0053e]" started-at="2024-05-22T18:35:49 IST" name="getdriver" finished-at="2024-05-22T18:35:49 IST" duration-ms="36" status="PASS">
+    <test started-at="2024-05-24T16:16:52 IST" name="Default test" finished-at="2024-05-24T16:16:53 IST" duration-ms="125">
+      <class name="Listners.demo1">
+        <test-method signature="ms()[pri:0, instance:Listners.demo1@6b2ea799]" started-at="2024-05-24T16:16:52 IST" name="ms" finished-at="2024-05-24T16:16:53 IST" duration-ms="40" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getdriver -->
-        <test-method signature="test5()[pri:5, instance:TestCases.HomePageTestCases@1fc0053e]" started-at="2024-05-22T18:35:49 IST" name="test5" description="To test the search functionality of the following for it is in the following" finished-at="2024-05-22T18:35:58 IST" duration-ms="8690" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-      </class> <!-- TestCases.HomePageTestCases -->
+        </test-method> <!-- ms -->
+      </class> <!-- Listners.demo1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
