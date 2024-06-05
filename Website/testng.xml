@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="RegressionTestCases">
-	<listeners>
-		<listener class-name="Listners.Listners"></listener>
-		<listener class-name="Listners.AnnotionTranformer"></listener>
-	</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="TestCases.AccountPageTestCases"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="RegressionTestCases" parallel="true" thread-count="4">
+    <listeners>
+        <listener class-name="Listners.Listners"></listener>
+        <listener class-name="Listners.AnnotionTranformer"></listener>
+    </listeners>
+    <test  name="Test">
+        <classes>
+            <class name="TestCases.HomePageTestCases"/>
+        </classes>
+    </test> <!-- Test -->
+    <test  name="Test1">
+        <classes>
+            <class name="TestCases.OrderingScenario"/>
+        </classes>
+    </test> 
 </suite> <!-- Suite -->

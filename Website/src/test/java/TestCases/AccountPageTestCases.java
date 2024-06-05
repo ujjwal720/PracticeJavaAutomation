@@ -4,9 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.sun.tools.sjavac.Log;
 
 import Listners.BaseTest;
 import Utillities.ExelUtilities;
@@ -16,11 +20,13 @@ public class AccountPageTestCases extends BaseTest {
 
 	public Pages.MyAccount MyAccount;
 	public ResusableMethods Methods;
+	public Logger logs;
 
 	public AccountPageTestCases() throws IOException {
 
 		MyAccount = new Pages.MyAccount(BaseTest.getdriver());
 		Methods = new ResusableMethods();
+		logs = LogManager.getLogger(this.getClass().getName());
 
 	}
 
@@ -47,6 +53,7 @@ public class AccountPageTestCases extends BaseTest {
 		}
 
 		MyAccount.signoutbutton();
+		logs.info("The sign in button is opend in the framework pleae check it");
 		Methods.waits(MyAccount.email);
 
 	}

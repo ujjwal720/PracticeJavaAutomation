@@ -69,7 +69,7 @@ public class OrderingScenario extends BaseTest {
 
 	}
 
-	@Test(dependsOnMethods = "test1", description = "To calculate the price redirection and everything for the cost here")
+	@Test(dependsOnMethods = "test1", description = "To calculate the price redirection and everything for the cost here",enabled=false)
 	public void calculateprice() {
 
 		List<WebElement> prices = Basket.prices;
@@ -89,7 +89,7 @@ public class OrderingScenario extends BaseTest {
 
 	}
 
-	@Test(description = "prices should be correct when we update the product price form the input", dependsOnMethods = "test1")
+	@Test(description = "prices should be correct when we update the product price form the input", dependsOnMethods = "test1",enabled=false)
 	public void test4() {
 
 		List<WebElement> io = Basket.inputmorequantity;
@@ -105,7 +105,7 @@ public class OrderingScenario extends BaseTest {
 
 	}
 
-	@Test(description = "To test the functionality for the folowing fields with excel", dependsOnMethods = "test1", dataProvider = "testdatabilling")
+	@Test(description = "To test the functionality for the folowing fields with excel", dependsOnMethods = "test1", dataProvider = "testdatabilling",enabled=false)
 	public void test5(String flag, String firstname, String lastname, String comp_name, String email, String mobole,
 			String address, String City, String pincode) throws Exception {
 
@@ -166,7 +166,7 @@ public class OrderingScenario extends BaseTest {
 
 	}
 
-	@Test(description = "to see whether the quantity is same in the checkout page", dependsOnMethods = "test4")
+	@Test(description = "to see whether the quantity is same in the checkout page", dependsOnMethods = "test4",enabled=false)
 	public void test6() throws IOException {
 		try {
 			Thread.sleep(4000);

@@ -17,6 +17,12 @@ public class BillingDetailsPage {
 		PageFactory.initElements(driver, this);
 
 	}
+	
+	
+	/*
+	 * 
+	 * xpath realtd to the billing details
+	 */
 
 	@FindBy(xpath = "//input[@name='billing_first_name']")
 	public WebElement firstname;
@@ -26,7 +32,7 @@ public class BillingDetailsPage {
 
 	@FindBy(xpath = "//input[@name='billing_company']")
 	public WebElement billing_company;
-
+                                                                                      
 	@FindBy(xpath = "//input[@name='billing_email']")
 	public WebElement email;
 
@@ -52,10 +58,16 @@ public class BillingDetailsPage {
 	public List<WebElement> productsquantity;
 
 	@FindBy(xpath = "//input[@id='place_order']")
-	public WebElement place_order;
+	public WebElement place_order;                         
 	
 	@FindBy(xpath="//ul[@class='woocommerce-error']")
 	public WebElement error;
+	
+	
+	
+	/*
+	 * fill the bll details
+	 */
 
 	public void submitform(String firstname, String lastname, String company,String email, String phonenumber, String address,
 			String city, String postcode) {

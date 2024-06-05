@@ -1,0 +1,6 @@
+23:31:13.372 [main]INFO  demolog - Hello this is just an log paractice
+23:31:13.381 [main]INFO  demolog - Hi asim
+23:52:18.552 [main]INFO  TestCases.HomePageTestCases - Slider value we are geeting
+18:01:05.717 [TestNG-test-Test-1]INFO  TestCases.HomePageTestCases - Slider value we are geeting
+18:24:06.506 [TestNG-test-Test-1]INFO  TestCases.HomePageTestCases - Slider value we are geeting
+18:28:58.887 [TestNG-test-Test-1]INFO  TestCases.HomePageTestCases - Slider value we are geeting

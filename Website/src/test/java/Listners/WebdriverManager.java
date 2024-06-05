@@ -10,25 +10,50 @@ import Utillities.Propertiesfilereader;
 
 public class WebdriverManager {
 
-	private static WebDriver driver;
+	private static final ThreadLocal<WebDriver> driver=new ThreadLocal<WebDriver>();
 
 	public static WebDriver getDriver() throws IOException {
+		
+		
+		
 
-		if (driver == null) {
-			driver = initilizedriver();
+		if (driver.get() == null) {
+			
+			driver.set(WebdriverManager.initilizedriver());
 
-			return driver;
+			return driver.get();
 
 		}
-		return driver;
+		return driver.get();
 
 	}
+	
+	/*
 
 	public static void setDriver(WebDriver driver) {
 		WebdriverManager.driver = driver;
 	}
+	
+	
+	
+	
+	
+	
+	public static WebDriver getwebdriverinstance() {
+		
+		
+		return driver.get();
+		
+		
+		
+		
+	}
+	
+	*/
 
 	public static WebDriver initilizedriver() throws IOException {
+		
+		WebDriver driver=null;;
 
 		try {
 			
@@ -38,23 +63,25 @@ public class WebdriverManager {
 			String browser =pro.ReadPropertiesfiles(prope, "browser");
 			if (browser.equals("chrome")) {
 
-				driver = new ChromeDriver();
+					 
+			       driver=new ChromeDriver();	 
 
 			}
 			
-			driver.get(pro.ReadPropertiesfiles(prope, "url"));
-			driver.manage().window().maximize();
+			
 
-			return driver;
+			
 
 		}
 
 		catch (Exception e) {
 			
 			e.printStackTrace();
-			return driver;
+			
 
 		}
+		
+		return driver;
 
 	}
 
