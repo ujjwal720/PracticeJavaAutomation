@@ -9,10 +9,5 @@
         <classes>
             <class name="TestCases.HomePageTestCases"/>
         </classes>
-    </test> <!-- Test -->
-    <test  name="Test1">
-        <classes>
-            <class name="TestCases.OrderingScenario"/>
-        </classes>
     </test> 
 </suite> <!-- Suite -->

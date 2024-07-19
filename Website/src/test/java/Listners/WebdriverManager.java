@@ -10,21 +10,27 @@ import Utillities.Propertiesfilereader;
 
 public class WebdriverManager {
 
-	private static final ThreadLocal<WebDriver> driver=new ThreadLocal<WebDriver>();
+	private static WebDriver driver;
 
 	public static WebDriver getDriver() throws IOException {
 		
 		
 		
 
-		if (driver.get() == null) {
+		if (driver == null) {
 			
-			driver.set(WebdriverManager.initilizedriver());
-
-			return driver.get();
+			
+            driver=initilizedriver();
+            
+            return driver;
+			
 
 		}
-		return driver.get();
+		
+		
+		return driver;
+           
+	
 
 	}
 	
@@ -53,7 +59,7 @@ public class WebdriverManager {
 
 	public static WebDriver initilizedriver() throws IOException {
 		
-		WebDriver driver=null;;
+		
 
 		try {
 			

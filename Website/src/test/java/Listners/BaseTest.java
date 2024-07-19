@@ -15,7 +15,6 @@ public class BaseTest {
 		if (driver == null) {
 
 			driver = WebdriverManager.getDriver();
-			
 			driver.manage().window().maximize();
 			driver.get("https://practice.automationtesting.in/");
 			

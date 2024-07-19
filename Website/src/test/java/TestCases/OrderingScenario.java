@@ -105,7 +105,7 @@ public class OrderingScenario extends BaseTest {
 
 	}
 
-	@Test(description = "To test the functionality for the folowing fields with excel", dependsOnMethods = "test1", dataProvider = "testdatabilling",enabled=false)
+	@Test(description = "To test the functionality for the folowing fields with excel", dependsOnMethods = "test1", dataProvider = "testdatabilling",enabled=true)
 	public void test5(String flag, String firstname, String lastname, String comp_name, String email, String mobole,
 			String address, String City, String pincode) throws Exception {
 
