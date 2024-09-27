@@ -23,6 +23,8 @@ public class HomePage {
 	@FindBy(xpath = "//input[@title='Search']")
 	public WebElement search;
 
+	@FindBy(xpath="//ul[@class='main-nav']/li")
+    List<WebElement> elements;
 	public HomePage(WebDriver driver) {
 
 		this.driver = driver;
@@ -42,6 +44,11 @@ public class HomePage {
 		
 		search.sendKeys(s);
 
+	}
+
+	public int totalelemnts(){
+
+		return elements.size();
 	}
 
 }

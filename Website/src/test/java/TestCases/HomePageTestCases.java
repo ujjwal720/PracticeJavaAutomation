@@ -33,7 +33,7 @@ public class HomePageTestCases extends BaseTest {
 
 		Assert.assertEquals(num, 3);
 		logs.info("Slider value we are geeting");
-		logs.info("the following browser is opening");
+	    logs.debug("The system is there or not not");
 
 	}
 
@@ -45,7 +45,9 @@ public class HomePageTestCases extends BaseTest {
 		for (int i = 0; i <= iop.size() - 1; i++) {
 
 			iop.get(i).click();
+
 			BaseTest.getdriver().navigate().back();
+			methods.waits(iop.get(i));
 
 		}
 
@@ -72,10 +74,32 @@ public class HomePageTestCases extends BaseTest {
 
 	}
 
+	@Test(description="To test the function of the list here is the description for it")
 	public void test6() {
-		
-		
-		
+
+       try {
+		   int total = HomePage.totalelemnts();
+		   Assert.assertEquals(total, 6);
+
+	   } catch (Exception e) {
+
+		   logs.info("test 6 has the ");
+	   }
+
+	}
+
+	public void test7(){
+		try{
+
+
+
+
+		}
+		catch(Exception e){
+
+			e.printStackTrace();
+		}
+
 
 	}
 

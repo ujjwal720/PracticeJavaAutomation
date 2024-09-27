@@ -13,6 +13,7 @@ public class AnnotionTranformer implements IAnnotationTransformer {
             Method testMethod ){
                                                 {
 		annotation.setRetryAnalyzer(Retry.class);
+
 	}
 }
 }
