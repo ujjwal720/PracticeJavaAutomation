@@ -1,6 +1,6 @@
 package CodingProblems;
 
-public class coding34 {
+public class zerotoend {
 
     public static void main(String[] args){
         /*

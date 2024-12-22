@@ -1,6 +1,6 @@
 package CodingProblems;
 
-public class fr {
+public class geeeksforgeeks2 {
     public static void main(String[] args){
 
         String io="geeksforgeeks";

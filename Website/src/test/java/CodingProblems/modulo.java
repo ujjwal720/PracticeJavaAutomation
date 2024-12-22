@@ -1,6 +1,6 @@
 package CodingProblems;
 
-public class prac1 {
+public class modulo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

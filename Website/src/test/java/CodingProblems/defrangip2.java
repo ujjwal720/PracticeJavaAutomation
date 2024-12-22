@@ -1,6 +1,6 @@
 package CodingProblems;
 
-public class defrangip {
+public class defrangip2 {
 
     public static void main(String[] args) {
 

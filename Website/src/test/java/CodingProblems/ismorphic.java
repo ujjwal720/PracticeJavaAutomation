@@ -1,6 +1,6 @@
 package CodingProblems;
 
-public class practice4 {
+public class ismorphic {
 
     public static void main(String[] args){
 

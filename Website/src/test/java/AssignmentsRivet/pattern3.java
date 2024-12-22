@@ -1,6 +1,6 @@
 package AssignmentsRivet;
 
-public class Second {
+public class pattern3 {
 
     public static void main(String[] args) {
 
