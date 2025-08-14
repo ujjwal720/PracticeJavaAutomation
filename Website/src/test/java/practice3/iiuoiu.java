@@ -5,6 +5,9 @@ import java.util.List;
 
 public class iiuoiu {
 
+    /*
+    biominail string
+     */
     public static void main(String[] args) {
 
      String text1 ="we will we will rock you";
@@ -33,6 +36,8 @@ public class iiuoiu {
 
 
      }
+
+        System.out.println(l);
 
 
      String[] res=new String[l.size()];
